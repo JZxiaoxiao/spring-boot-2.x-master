@@ -185,7 +185,8 @@ springboot-storm.sh 启动.
 		        SpringBootApplication.run();
 		        app = SpringBeanUtil.getBean(ApplicationConfiguration.class);
 			...
-	
+			
+			
 		@Override
     		public void prepare(Map map, TopologyContext topologyContext, OutputCollector outputCollector) {
         		SpringBootApplication.run();
