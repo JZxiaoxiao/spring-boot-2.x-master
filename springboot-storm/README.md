@@ -180,10 +180,17 @@ springboot-storm.sh 启动.
           
 - 而在bolt的prepare 方法和spot中的 open方法使用就可以了
 
-        @Override
-	      public void open(Map map, TopologyContext arg1, SpoutOutputCollector collector) {
-		        PreprocessTopologyApplication.run();
+        	@Override
+	      	public void open(Map map, TopologyContext arg1, SpoutOutputCollector collector) {
+		        SpringBootApplication.run();
 		        app = SpringBeanUtil.getBean(ApplicationConfiguration.class);
+			...
+	
+		@Override
+    		public void prepare(Map map, TopologyContext topologyContext, OutputCollector outputCollector) {
+        		SpringBootApplication.run();
+			...
+			
             
  # 实测效果
  
