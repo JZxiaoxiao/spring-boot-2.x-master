@@ -163,7 +163,7 @@ springboot-storm.sh 启动.
         ...
 - 在springboot 启动类设置上下文
 
-        	public synchronized static void run(String ...args) {
+        public synchronized static void run(String ...args) {
             if(SpringBootApplication.context == null) {
             System.out.println("SpringBootApplication 开始启动");
             try {
