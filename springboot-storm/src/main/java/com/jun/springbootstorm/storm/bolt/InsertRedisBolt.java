@@ -5,7 +5,6 @@ import com.jun.springbootstorm.SpringBootStormApplication;
 import com.jun.springbootstorm.base.constant.Constants;
 import com.jun.springbootstorm.config.ApplicationConfiguration;
 import com.jun.springbootstorm.dao.mapper.bo.TestUser;
-import com.jun.springbootstorm.service.atom.interfaces.TestUserAtomSV;
 import com.jun.springbootstorm.util.SpringBeanUtil;
 import org.apache.commons.lang.StringUtils;
 import org.apache.storm.task.OutputCollector;
@@ -15,6 +14,7 @@ import org.apache.storm.topology.base.BaseRichBolt;
 import org.apache.storm.tuple.Tuple;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.core.RedisConnectionUtils;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 import java.util.ArrayList;
@@ -67,6 +67,8 @@ public class InsertRedisBolt extends BaseRichBolt {
                 }catch (Exception e){
                     logger.error("");
                     e.printStackTrace();
+                }finally {
+                    RedisConnectionUtils.unbindConnection(stringRedisTemplate.getConnectionFactory());
                 }
             }
             this.collector.ack(tuple);
