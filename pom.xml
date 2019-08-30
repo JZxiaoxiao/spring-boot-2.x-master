@@ -16,6 +16,7 @@
         <module>springboot-quartz</module>
         <module>springboot-redis</module>
         <module>springboot-storm</module>
+        <module>springboot-mybatis-multiple-datasource</module>
     </modules>
 
 </project>
