@@ -6,5 +6,7 @@ public interface TestService {
 
     void test2();
 
-    void test3();
+    void testTransaction1() throws Exception;
+
+    void testTransaction2() throws Exception;
 }

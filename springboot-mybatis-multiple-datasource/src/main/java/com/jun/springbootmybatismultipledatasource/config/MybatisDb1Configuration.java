@@ -9,11 +9,18 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 
-@Configuration
-@MapperScan(basePackages = {"com.jun.springbootmybatismultipledatasource.dao.mapper.db1"}, sqlSessionFactoryRef = "sqlSessionFactory1")
+/**
+ * @Description:
+ * 不启用分布式事务配置多数据源配置
+ * @author JZxiaoxiao
+ * @date 2019年9月1日
+ */
+//@Configuration
+//@MapperScan(basePackages = {"com.jun.springbootmybatismultipledatasource.dao.mapper.db1"}, sqlSessionFactoryRef = "sqlSessionFactory1")
 public class MybatisDb1Configuration {
 
     @Autowired
@@ -34,5 +41,10 @@ public class MybatisDb1Configuration {
     public SqlSessionTemplate sqlSessionTemplate1() throws Exception {
         SqlSessionTemplate template = new SqlSessionTemplate(sqlSessionFactory1());
         return template;
+    }
+
+    @Bean(name = "db1TransactionManager")
+    public DataSourceTransactionManager testTransactionManager(@Qualifier("db1") DataSource dataSource) {
+        return new DataSourceTransactionManager(dataSource);
     }
 }
