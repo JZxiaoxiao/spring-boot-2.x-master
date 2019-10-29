@@ -39,7 +39,7 @@ public class DataSourceConfiguration {
 
     /**
      * @Description:
-     * 不启用分布式事务配置多数据源
+     * 启用分布式事务配置多数据源
      * @author JZxiaoxiao
      * @date 2019年9月1日
      */

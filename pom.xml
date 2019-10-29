@@ -17,6 +17,7 @@
         <module>springboot-redis</module>
         <module>springboot-storm</module>
         <module>springboot-mybatis-multiple-datasource</module>
+        <module>springboot-mybatis-dynamic-datasource</module>
     </modules>
 
 </project>
