@@ -7,6 +7,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 /**
  * @Author JZxiaoxiao
  * @Description
@@ -29,7 +31,7 @@ public class TestController {
 
     @PostMapping("/add")
     @ApiOperation(value = "创建用户", notes = "根据User对象创建用户")
-    public String postUser(@RequestBody User user) {
+    public String postUser(@Valid @RequestBody User user) {
         return "success";
     }
 
