@@ -18,6 +18,7 @@
         <module>springboot-storm</module>
         <module>springboot-mybatis-multiple-datasource</module>
         <module>springboot-mybatis-dynamic-datasource</module>
+        <module>springboot-swagger2</module>
     </modules>
 
 </project>
