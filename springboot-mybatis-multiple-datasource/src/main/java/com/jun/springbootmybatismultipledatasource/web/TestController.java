@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author JZxiaoxiao
  * @date 2019年9月1日
  */
-@RestController()
+@RestController
 @RequestMapping("/test")
 public class TestController {
 
