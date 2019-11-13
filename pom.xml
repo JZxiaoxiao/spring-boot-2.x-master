@@ -20,6 +20,7 @@
         <module>springboot-mybatis-dynamic-datasource</module>
         <module>springboot-swagger2</module>
         <module>springboot-acture</module>
+        <module>springboot-docker</module>
     </modules>
 
 </project>
