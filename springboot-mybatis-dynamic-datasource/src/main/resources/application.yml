@@ -1,0 +1,22 @@
+server:
+  port: 8002
+spring:
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      datasource:
+        master:
+          username: root
+          password: root
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/iov
+        slave_1:
+          username: root
+          password: 123456
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://47.106.86.230:3306/iov
+#        slave_2:
+#          username: root
+#          password: 123456
+#          driver-class-name: com.mysql.jdbc.Driver
+#          url: jdbc:mysql://xx.xx.xx.xx:3308/dynamic
