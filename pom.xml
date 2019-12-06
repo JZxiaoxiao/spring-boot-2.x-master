@@ -21,6 +21,7 @@
         <module>springboot-swagger2</module>
         <module>springboot-acture</module>
         <module>springboot-docker</module>
+        <module>mp-generator</module>
     </modules>
 
 </project>

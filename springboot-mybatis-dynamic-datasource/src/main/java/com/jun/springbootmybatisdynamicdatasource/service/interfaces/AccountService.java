@@ -15,4 +15,6 @@ import java.util.List;
  */
 public interface AccountService extends IService<Account> {
     List<Account> getList(String id);
+
+    List<Account> getAccountList(String id);
 }

@@ -22,6 +22,12 @@ public class TestController {
         return "success!"+s;
     }
 
+    @GetMapping("/query1")
+    public String testQuery1(@RequestParam String id){
+        String s = testService.query1(id);
+        return "success!"+s;
+    }
+
     @GetMapping("/query2")
     public String testQuery2(@RequestParam String id){
         String s = testService.query2(id);

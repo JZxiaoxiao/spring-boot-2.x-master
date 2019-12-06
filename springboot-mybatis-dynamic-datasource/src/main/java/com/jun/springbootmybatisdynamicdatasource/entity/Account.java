@@ -4,7 +4,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.time.LocalDateTime;
+
+import java.sql.Timestamp;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
@@ -24,7 +25,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-//@TableName("account")
+@TableName("account")
 @ApiModel(value="Account对象", description="用户表")
 public class Account extends Model<Account> {
 
@@ -47,7 +48,7 @@ public class Account extends Model<Account> {
 
     @ApiModelProperty(value = "创建时间")
     @TableField("createDate")
-    private LocalDateTime createDate;
+    private Timestamp createDate;
 
 
     @Override

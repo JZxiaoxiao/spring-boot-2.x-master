@@ -20,3 +20,7 @@ spring:
 #          password: 123456
 #          driver-class-name: com.mysql.jdbc.Driver
 #          url: jdbc:mysql://xx.xx.xx.xx:3308/dynamic
+mybatis-plus:
+  mapper-locations: classpath:mybatis/*.xml
+mybatis:
+  mapper-locations: classpath:mybatis/*.xml
