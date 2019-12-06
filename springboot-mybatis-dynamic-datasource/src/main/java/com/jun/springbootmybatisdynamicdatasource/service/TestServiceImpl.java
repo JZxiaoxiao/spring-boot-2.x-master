@@ -27,13 +27,13 @@ public class TestServiceImpl implements TestService {
     /**
      * @Author JZxiaoxiao
      * @Description
+     * 直接调用mybatis-plus 原生方法
      *  AOP要生效需要满足两个条件：
      *  1.mybatis-plus-boot-starter 需要放开
      *  2.添加mybatis-plus:mapper-locations 扫描
      */
     @Override
     public String query(String id) {
-        //直接调用Mybatis plus 的service方法AOP不会生效，即数据源不会动态切换!!!
         List<Account> accountList = accountService.list(new QueryWrapper<Account>().lambda()
                 .eq(Account::getItemID, id));
         Account account = accountList.get(0);
@@ -42,13 +42,13 @@ public class TestServiceImpl implements TestService {
     /**
      * @Author JZxiaoxiao
      * @Description
+     * 直接调用mybatis-plus 原生方法覆写方法
      *  AOP要生效需要满足两个条件：
      *  1.mybatis-plus-boot-starter 需要放开
      *  2.添加mybatis-plus:mapper-locations 扫描
      */
     @Override
     public String query1(String id) {
-        //调用Mybatis plus 重写的service方法AOP会生效，数据源会动态切换!!!
         List<Account> accountList = accountService.getAccountList(id);
         Account account = accountList.get(0);
         return "name=" + account.getName() + ",age=" + account.getAge();
@@ -57,13 +57,13 @@ public class TestServiceImpl implements TestService {
     /**
      * @Author JZxiaoxiao
      * @Description
+     * 直接调用mybatis 原生方法
      *  AOP要生效需要满足两个条件：
      *  1.mybatis-spring-boot-starter 需要放开
      *  2.添加mybatis:mapper-locations 扫描
      */
     @Override
     public String query2(String id) {
-        //调用Mybatis plus 自己写的service方法AOP会生效，数据源会动态切换!!!
         List<Account> accountList = accountService.getList(id);
         Account account = accountList.get(0);
         return "name=" + account.getName() + ",age=" + account.getAge();
@@ -72,6 +72,7 @@ public class TestServiceImpl implements TestService {
     /**
      * @Author JZxiaoxiao
      * @Description
+     * 直接调用mybatis 原生方法
      *  AOP要生效需要满足两个条件：
      *  1.mybatis-plus-boot-starter 需要去掉
      *  2.添加mybatis:mapper-locations 扫描
@@ -79,7 +80,6 @@ public class TestServiceImpl implements TestService {
      */
     @Override
     public String query3(String id) {
-        //调用Mybatis 原生方法AOP会生效，数据源会动态切换!!!
         Account account = new Account();
         account.setItemID(id);
         account.setName("hhh");
