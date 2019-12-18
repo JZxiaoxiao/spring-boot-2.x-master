@@ -20,7 +20,7 @@
 
   - 项目通过springboot 整合mybatis，提供多数据源配置参考
   - 支持多数据源
-  - 支持多数据源事务支持
+  - 支持多数据源事务
 ### [springboot-mybatis-dynamic-datasource 基于mybatis-plus的动态数据源配置](https://github.com/JZxiaoxiao/spring-boot-2.x-master/tree/master/springboot-mybatis-dynamic-datasource)
 
   - 项目通过springboot 整合mybatis-plus，提供动态数据源配置参考
