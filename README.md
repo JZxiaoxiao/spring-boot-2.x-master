@@ -9,13 +9,13 @@ spring boot 2.x 项目整合
 
 - [springboot-kafka-storm](https://github.com/JZxiaoxiao/spring-boot-2.x-master/tree/master/springboot-storm)
 
-  项目通过springboot 整合storm+kafka，提供基础框架demo参考，实际项目原型已经在公司上线正常运行。
-  支持单机和集群思路解决方案。
-  支持线上启动脚本提供。
-  支持监控处理。
-  支持jvm优化方案。
-  支持拓扑worker，spot和bolt优化方案。
-  支持redis(jedis)，mysql，hbase等中间件的整合
+  - 项目通过springboot 整合storm+kafka，提供基础框架demo参考，实际项目原型已经在公司上线正常运行。
+  - 支持单机和集群思路解决方案。
+  - 支持线上启动脚本提供。
+  - 支持监控处理。
+  - 支持jvm优化方案。
+  - 支持拓扑worker，spot和bolt优化方案。
+  - 支持redis(jedis)，mysql，hbase等中间件的整合
 
 - [springboot-redis-lettuce](https://github.com/JZxiaoxiao/spring-boot-2.x-master/tree/master/springboot-redis)
   项目
