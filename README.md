@@ -14,3 +14,4 @@ spring boot 2.x 项目整合
 - [springboot-mybatis-dynamic-datasource 基于mybatis-plus的动态数据源配置](https://github.com/JZxiaoxiao/spring-boot-2.x-master/tree/master/springboot-mybatis-dynamic-datasource)
 - [springboot-acture](https://github.com/JZxiaoxiao/spring-boot-2.x-master/tree/master/springboot-acture)
 - [springboot-swagger2](https://github.com/JZxiaoxiao/spring-boot-2.x-master/tree/master/springboot-swagger2)
+- [springboot-docker](https://github.com/JZxiaoxiao/spring-boot-2.x-master/tree/master/springboot-docker)
